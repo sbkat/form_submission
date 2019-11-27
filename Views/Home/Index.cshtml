@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Form Submission";
+}
+@model User
+
+<h1>Enter your information</h1>
+<form asp-action="Submit" asp-controller="Home" method="post">
+    <span asp-validation-for="firstName"></span><br>
+    <label asp-for="firstName">First Name: </label>
+        <input asp-for="firstName"><br>
+    <span asp-validation-for="lastName"></span><br>
+    <label asp-for="lastName">Last Name: </label>
+        <input asp-for="lastName"><br>
+    <span asp-validation-for="age"></span><br>
+    <label asp-for="age">Age: </label>
+        <input asp-for="age"><br>
+    <span asp-validation-for="email"></span><br>
+    <label asp-for="email">Email: </label>
+        <input asp-for="email"><br>
+    <span asp-validation-for="password"></span><br>
+    <label asp-for="password">Password: </label>
+        <input asp-for="password"><br>
+    <button class="btn-info">Submit</button>
+</form>
